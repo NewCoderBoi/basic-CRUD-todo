@@ -1,0 +1,33 @@
+GET  http://localhost:3000/api/v1/tasks
+
+###
+
+POST  http://localhost:3000/api/v1/tasks
+content-type: application/json
+
+{
+    "name": "New Task",
+    "completed": true
+}
+
+###
+
+GET  http://localhost:3000/api/v1/tasks/6239d9ab2b0e79fa8150d410
+
+###
+
+GET  http://localhost:3000/api/v1/tasks/6239d9ab2b0e79fa8150d460
+
+###
+
+PATCH  http://localhost:3000/api/v1/tasks/1
+Content-Type: application/json
+
+{
+    "name": "Task 1",
+    "completed": false
+}
+
+###
+
+DELETE  http://localhost:3000/api/v1/tasks/1
