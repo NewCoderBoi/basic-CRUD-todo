@@ -8,11 +8,12 @@ const app = express();
 
 const port = 3000;
 
+app.use(express.static('./public'));
 app.use(express.json()); // Express JSON Middleware, used to parse incoming requests with JSON payloads.
 
-app.get('/welcome', (req,res)=>{
-    res.send(`Welcome to basic backend lessons`);
-});
+// app.get('/welcome', (req,res)=>{
+//     res.send(`Welcome to basic backend lessons`);
+// });
 
 app.use('/api/v1/tasks', tasks);
 
